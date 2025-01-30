@@ -3,7 +3,7 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart 
 import smtplib 
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 
 today = datetime.now().date()
 
