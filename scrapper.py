@@ -34,12 +34,11 @@ for link in links:
     href = link.get("href")
     if title and href:
         new_anime_ep_dict[title] = href
-        user_follow_list = []
-while(first_time):
-    name = input("anime ismini girin(cikmak icin 'Exit' yazin): ")
-    if name.lower() == "exit":
-        break
-    user_follow_list.append(name)
+
+user_follow_list = []
+
+with open("anime_list_i_watching.txt", "r") as file:
+    user_follow_list = [series .strip() for series in file]
 
 import difflib
 def benzerlik_orani(kelime1, kelime2):
